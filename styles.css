@@ -297,8 +297,10 @@ header ul li a:hover {
 }
 
 /* PROJECTS */
-
-#projects {
+.projects-mobile{
+  display: none;
+}
+.projects {
   position: relative;
 }
 .bg-img {
@@ -306,7 +308,7 @@ header ul li a:hover {
   z-index: -1;
   filter: brightness(30%);
   width: 100%;
-  height: 700px;
+  height: 100%;
 }
 .carousel {
   padding: 100px 0;
@@ -412,6 +414,9 @@ footer {
   .arrow-down p {
     font-size: 0.8rem;
   }
+  .projects-mobile{
+    display: none;
+  }
 }
 /* For Laptop View */
 @media screen and (min-device-width: 1069px) and (max-device-width: 1248px) {
@@ -448,6 +453,9 @@ footer {
   }
   .arrow-down p {
     font-size: 0.7rem;
+  }
+  .projects-mobile{
+    display: none;
   }
 }
 
@@ -491,6 +499,12 @@ footer {
     font-family: "Orbitron", sans-serif;
     font-size: 0.6rem;
   }
+  .bg-img {
+    height: 100%;
+  }
+  .carousel-item {
+    height: 390px;
+  }
   .card-info {
     left: 100px;
   }
@@ -500,6 +514,9 @@ footer {
   .card-demo img {
     height: 400px;
     width: 700px;
+  }
+  .projects-mobile{
+    display: none;
   }
 }
 
@@ -583,10 +600,10 @@ footer {
     display: none;
   }
   .bg-img {
-    height: 600px;
+    height: 100%;
   }
   .carousel-item {
-    height: 400px;
+    height: 300px;
   }
   .card-info {
     left: 100px;
@@ -597,6 +614,12 @@ footer {
   .card-demo img {
     height: 350px;
     width: 520px;
+  }
+  .projects{
+    display: block;
+  }
+  .projects-mobile{
+    display: none;
   }
 }
 /* GENERAL MOBILE VIEW  */
@@ -611,7 +634,7 @@ footer {
     display: grid;
     grid-template-columns: 2fr;
     margin: 80px 0;
-    grid-template-rows: 600px 100px;
+    grid-template-rows: 650px 100px;
   }
   .controls-mobile {
     grid-column: 1;
@@ -671,7 +694,7 @@ footer {
     width: 100%;
     margin: auto;
     padding: 0 0 30px;
-    font-size: 1rem;
+    font-size: 1.3rem;
     text-align: right;
   }
   .landing-btn {
@@ -717,10 +740,10 @@ footer {
     margin-left: 40px;
   }
   .bg-img {
-    height: 500px;
+    height: 100%;
   }
   .carousel-item {
-    height: 250px;
+    height: 230px;
   }
   .card-info {
     left: 100px;
@@ -730,7 +753,7 @@ footer {
   }
   .card-demo img {
     height: 250px;
-    width: 420px;
+    width: 380px;
   }
   .card-info h1{
     font-size: 3rem;
@@ -738,9 +761,15 @@ footer {
   .card-info p{
     font-size: 1.1rem;
   }
+  .projects-mobile{
+    display: none;
+  }
+  .projects{
+    display: block;
+  }
 }
 /* For Mobile Portrait View */
-@media screen and (min-device-width: 685px) and (max-device-width: 750px) {
+@media screen and (min-device-width: 685px) and (max-device-width: 749px) {
   .wrapper {
     padding: 50px 50px 100px;
   }
@@ -751,7 +780,7 @@ footer {
     display: grid;
     grid-template-columns: 2fr;
     margin: 80px 0;
-    grid-template-rows: 600px 100px;
+    grid-template-rows: 650px 100px;
   }
   .controls-mobile {
     grid-column: 1;
@@ -858,31 +887,59 @@ footer {
     margin-left: 40px;
   }
   .bg-img {
-    height: 500px;
+    height: 100%;
+  }
+  .projects{
+    display: none;
+  }
+  .projects-mobile{
+    display:block;
+    position: relative;
+  }
+  .bg-img {
+    position: absolute;
+    z-index: -1;
+    filter: brightness(30%);
+    width: 100%;
+    height: 100%;
+  }
+  .carousel {
+    padding: 40px 0 0;
   }
   .carousel-item {
-    height: 250px;
+    height: 800px;
   }
   .card-info {
-    left: 100px;
+    margin: auto;
+    top: -5px;
+    text-align: center;
+    width: 60%;
   }
-  .card-demo {
-    right: 100px;
-  }
-  .card-demo img {
-    height: 250px;
-    width: 420px;
-  }
-  .card-info h1{
+  .title {
+    color: #ffffff;
     font-size: 3rem;
   }
-  .card-info p{
-    font-size: 1.1rem;
+  .desc {
+    font-size: 1.2rem;
+    color: #ffffff;
   }
+  .card-demo {
+    margin: auto;
+    padding-top: 100px;
+    width: 60%;
+  }
+  .card-demo img {
+    height: 600px;
+    width: 300px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 }
 @media screen and (min-device-width: 480px) and (max-device-width: 684px) {
   .wrapper {
-    padding: 50px 50px 100px;
+    padding: 50px 30px 100px;
   }
   .wrapper header {
     display: none;
@@ -890,8 +947,8 @@ footer {
   .mobile-flex {
     display: grid;
     grid-template-columns: 2fr;
-    margin: 80px 0;
-    grid-template-rows: 600px 100px;
+    margin: 40px 0 0;
+    grid-template-rows: 580px 100px;
   }
   .controls-mobile {
     grid-column: 1;
@@ -922,17 +979,17 @@ footer {
     grid-column: 1 / 3;
     grid-row: 2;
     grid-template-rows: 80px 40px 30px;
-    margin-top: -100px;
+    margin-top: -200px;
     width: auto;
   }
   .landing {
     display: none;
   }
   .photo {
-    height: 500px;
+    height: 350px;
     position: absolute;
     right: 0;
-    top: 150px;
+    top: 90px;
     z-index: 0;
   }
   .landing-mobile-info{
@@ -965,7 +1022,6 @@ footer {
   .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    margin: 120px 0 0;
   }
   .col1 {
     grid-column: 1 / 3;
@@ -998,26 +1054,214 @@ footer {
   .astro {
     margin-left: 40px;
   }
+  .projects{
+    display: none;
+  }
+  .projects-mobile{
+    display:block;
+    position: relative;
+  }
   .bg-img {
-    height: 370px;
+    position: absolute;
+    z-index: -1;
+    filter: brightness(30%);
+    width: 100%;
+    height: 100%;
+  }
+  .carousel {
+    padding: 40px 0 0;
   }
   .carousel-item {
-    height: 160px;
+    height: 750px;
   }
   .card-info {
-    left: 100px;
+    margin: 0 0 0 -30px;
+    top: -5px;
+    text-align: center;
+    width: 60%;
+  }
+  .title {
+    color: #ffffff;
+    font-size: 2.7rem;
+  }
+  .desc {
+    font-size: 0.9rem;
+    color: #ffffff;
   }
   .card-demo {
-    right: 100px;
+    margin: auto;
+    padding-top: 100px;
+    width: 45%;
   }
   .card-demo img {
-    height: 190px;
-    width: 300px;
+    height: 580px;
+    width: 270px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
-  .card-info h1{
-    font-size: 2.5rem;
+}
+@media screen and (min-device-width: 300px) and (max-device-width: 479px) {
+  .wrapper {
+    padding: 50px 30px 100px 20px;
   }
-  .card-info p{
-    font-size: 0.9rem;
+  .wrapper header {
+    display: none;
+  }
+  .mobile-flex {
+    display: grid;
+    grid-template-columns: 2fr;
+    margin: 20px 0 0;
+    grid-template-rows: 460px 20px;
+  }
+  .controls-mobile {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .controls-mobile-ordered {
+    display: grid;
+    grid-template-columns: 1fr;
+    list-style: none;
+  }
+  .controls-mobile button {
+    font-size: 0.7rem;
+    border: 2px solid #b024d3;
+    box-shadow: 2px 2px 15px#000000;
+    padding: 10px 25px;
+    float: left;
+    margin-top: 25px;
+    margin-left: 45px;
+    width: 120px;
+    z-index: 1;
+  }
+  .landing-mobile-photo {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .landing-mobile-info {
+    display: block;
+    grid-column: 1 / 3;
+    grid-row: 2;
+    grid-template-rows: 80px 40px 30px;
+    margin-top: -200px;
+    width: auto;
+  }
+  .landing {
+    display: none;
+  }
+  .photo {
+    height: 250px;
+    position: absolute;
+    right: 0;
+    top: 70px;
+    z-index: 0;
+  }
+  .landing-mobile-info{
+    z-index: 1;
+  }
+  .landing-mobile-info h1 span {
+    font-size: 0.8rem;
+    float: left;
+    font-weight: normal;
+    margin: 10px 0 0 10px;
+  }
+  .landing-mobile-info h1 {
+    font-size: 1.7rem;
+    float: none;
+    font-weight: bold;
+  }
+  .landing-mobile-info p {
+    width: 100%;
+    margin: auto;
+    padding: 0 0 30px;
+    font-size: 0.8rem;
+    text-align: right;
+  }
+  .landing-btn {
+    display: none;
+  }
+  .bounce-link {
+    display: none;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .col1 {
+    grid-column: 1 / 3;
+    place-self: center;
+    display: grid;
+  }
+  .col2 {
+    grid-column: 3 / 5;
+    place-self: center;
+  }
+  .col3 {
+    display: none;
+  }
+  .about-text {
+    text-align: right;
+  }
+  .about-text p{
+    font-size: 0.8rem;
+    font-weight: 200;
+    line-height: 1.2rem;
+  }
+  .icon-hobby{
+    height: 80px;
+  }
+  .icon-hobby:active {
+    height: 90px;
+  }
+  .book {
+    margin-left: -20px;
+  }
+  .science {
+    margin-left: 20px;
+  }
+  .code {
+    margin-left: -20px;
+  }
+  .astro {
+    margin-left: 20px;
+  }
+  .projects{
+    display: none;
+  }
+  .projects-mobile{
+    display:block;
+    position: relative;
+  }
+  .carousel {
+    padding: 40px 0 0;
+  }
+  .carousel-item {
+    height: 500px;
+  }
+  .card-info {
+    margin: 0 0 0 -70px;
+    top: -5px;
+    text-align: center;
+    width: 60%;
+  }
+  .title {
+    color: #ffffff;
+    font-size: 2.2rem;
+  }
+  .desc {
+    font-size: 0.7rem;
+    color: #ffffff;
+  }
+  .card-demo {
+    margin: auto;
+    padding-top: 100px;
+    width: 35%;
+  }
+  .card-demo img {
+    height: 350px;
+    width: 170px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
