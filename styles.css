@@ -420,6 +420,10 @@ footer {
   }
   .photo {
     height: 350px;
+    z-index: 0;
+  }
+  .landing-mobile-info{
+    z-index: 1;
   }
   .developer-text {
     grid-template-rows: 100px 50px 50px;
@@ -454,6 +458,10 @@ footer {
   }
   .photo {
     height: 300px;
+    z-index: 0;
+  }
+  .landing-mobile-info{
+    z-index: 1;
   }
   .developer-text {
     grid-template-rows: 80px 40px 30px;
@@ -540,6 +548,10 @@ footer {
     height: 500px;
     position: absolute;
     right: 80px;
+    z-index: 0;
+  }
+  .landing-mobile-info{
+    z-index: 1;
   }
   .landing-mobile-info h1 span {
     font-size: 1.3rem;
@@ -639,6 +651,10 @@ footer {
     height: 500px;
     position: absolute;
     right: 0;
+    z-index: 0;
+  }
+  .landing-mobile-info{
+    z-index: 1;
   }
   .landing-mobile-info h1 span {
     font-size: 2rem;
@@ -700,6 +716,28 @@ footer {
   .astro {
     margin-left: 40px;
   }
+  .bg-img {
+    height: 500px;
+  }
+  .carousel-item {
+    height: 250px;
+  }
+  .card-info {
+    left: 100px;
+  }
+  .card-demo {
+    right: 100px;
+  }
+  .card-demo img {
+    height: 250px;
+    width: 420px;
+  }
+  .card-info h1{
+    font-size: 3rem;
+  }
+  .card-info p{
+    font-size: 1.1rem;
+  }
 }
 /* For Mobile Portrait View */
 @media screen and (min-device-width: 685px) and (max-device-width: 750px) {
@@ -754,6 +792,10 @@ footer {
     position: absolute;
     right: 0;
     top: 100px;
+    z-index: 0;
+  }
+  .landing-mobile-info{
+    z-index: 1;
   }
   .landing-mobile-info h1 span {
     font-size: 1.6rem;
@@ -815,6 +857,28 @@ footer {
   .astro {
     margin-left: 40px;
   }
+  .bg-img {
+    height: 500px;
+  }
+  .carousel-item {
+    height: 250px;
+  }
+  .card-info {
+    left: 100px;
+  }
+  .card-demo {
+    right: 100px;
+  }
+  .card-demo img {
+    height: 250px;
+    width: 420px;
+  }
+  .card-info h1{
+    font-size: 3rem;
+  }
+  .card-info p{
+    font-size: 1.1rem;
+  }
 }
 @media screen and (min-device-width: 480px) and (max-device-width: 684px) {
   .wrapper {
@@ -869,6 +933,10 @@ footer {
     position: absolute;
     right: 0;
     top: 150px;
+    z-index: 0;
+  }
+  .landing-mobile-info{
+    z-index: 1;
   }
   .landing-mobile-info h1 span {
     font-size: 1.2rem;
@@ -915,7 +983,7 @@ footer {
     text-align: right;
   }
   .about-text p{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 200;
   }
   .book {
@@ -929,5 +997,27 @@ footer {
   }
   .astro {
     margin-left: 40px;
+  }
+  .bg-img {
+    height: 370px;
+  }
+  .carousel-item {
+    height: 160px;
+  }
+  .card-info {
+    left: 100px;
+  }
+  .card-demo {
+    right: 100px;
+  }
+  .card-demo img {
+    height: 190px;
+    width: 300px;
+  }
+  .card-info h1{
+    font-size: 2.5rem;
+  }
+  .card-info p{
+    font-size: 0.9rem;
   }
 }
